@@ -4,17 +4,12 @@
     }; 
     track?:Track [];
     moodTracks?:Moodtracks [];
-
-    artist_image_url?: string [];
-
-    
    }
+
    export interface Track {
     name: string;
     url: string;
-    // artist: string[];
-    artist?: any;
-    // artistArray: Artist[];
+    artist?: any;  //changed the type to any so that you can access the mbid on the artist object on line 53 in the MusicService. if you want this to be strongly typed you can create an Artist interface
     image: string[];
     mbid: string;
 
@@ -30,11 +25,6 @@
     url?: string;
     name?: string;
     image?: string;
-    } 
-
-    export interface Artist {
-      name?: string;
-      mbid?: string;
     }
 
 
